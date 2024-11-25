@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
-import Login from './pages/Login';
-import Register from './pages/Register';
+// import Login from './pages/Login';
+// import Register from './pages/Register';
 import Home from './pages/Home';
 
 function App() {
@@ -10,9 +10,13 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <main>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<Home />} />
+            <Route path="/movie" element={<Home />} />
+            <Route path="/gaming" element={<Home />} />
+            <Route path="/news" element={<Home />} />
+            <Route path="/sports" element={<Home />} />
+            <Route path="/learning" element={<Home />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

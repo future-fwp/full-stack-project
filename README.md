@@ -1,131 +1,95 @@
-# Video Streaming Platform
+# YouTube Clone
 
-A modern video streaming platform built with React, TypeScript, and Node.js, featuring a responsive design and smooth animations.
+A modern YouTube clone built with React, TypeScript, and Tailwind CSS. This application provides a seamless video browsing experience with features similar to YouTube.
 
 ## Features
 
-- 🎥 Video streaming with mock data integration
-- 🔐 User authentication with JWT
-- 📱 Responsive design for all screen sizes
-- ✨ Smooth animations using Framer Motion
-- 🎨 Modern UI with Tailwind CSS
-- 🎯 TypeScript for better type safety
-- 🚀 Fast and efficient MongoDB database
+- 🎥 Video Categories
+  - Home: Popular videos
+  - Explore: Trending content
+  - Movies: Latest movie trailers
+  - Gaming: Gaming content
+  - News: Latest news videos
+  - Sports: Sports highlights
+  - Learning: Educational content
+
+- 💫 Modern UI Features
+  - Responsive design
+  - Collapsible sidebar navigation
+  - Video grid layout
+  - Video player with comments
+  - Related videos sidebar
+  - View count formatting
+  - Smooth animations with Framer Motion
 
 ## Tech Stack
 
-### Frontend
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide Icons
-- React Router DOM
-
-### Backend
-- Node.js
-- Express
-- MongoDB
-- JWT Authentication
+- ⚛️ React 18
+- 🔷 TypeScript
+- 🎨 Tailwind CSS
+- 🚀 Vite
+- 🎭 Framer Motion
+- 🔄 React Router DOM
+- 📡 Axios
+- 🎬 YouTube Data API v3
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
+1. Clone the repository
 ```bash
 git clone <repository-url>
 cd project-3
 ```
 
-2. Install dependencies for both frontend and backend:
+2. Install dependencies
 ```bash
-# Install frontend dependencies
-npm install
-
-# Install backend dependencies
-cd server
 npm install
 ```
 
-3. Set up environment variables:
-
-Create a `.env` file in the server directory with the following content:
+3. Set up environment variables
+Create a `.env` file in the root directory and add your YouTube API key:
 ```env
-PORT=4000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+VITE_YOUTUBE_API_KEY=your_youtube_api_key
 ```
 
-4. Start the development servers:
-
+4. Start the development server
 ```bash
-# Start backend server (from server directory)
-npm run dev
-
-# Start frontend development server (from root directory)
 npm run dev
 ```
 
 ## Project Structure
 
 ```
-project-3/
-├── src/                    # Frontend source files
-│   ├── components/         # Reusable React components
-│   ├── pages/             # Page components
-│   ├── lib/               # Utilities and API functions
-│   └── store/             # State management
-├── server/                 # Backend source files
-│   ├── src/
-│   │   ├── routes/        # API routes
-│   │   ├── models/        # Database models
-│   │   └── middleware/    # Custom middleware
-│   └── .env               # Environment variables
-└── README.md              # Project documentation
+src/
+├── components/
+│   ├── Sidebar.tsx        # Navigation sidebar
+│   ├── YouTubeVideo.tsx   # Main video component
+│   └── VideoCard.tsx      # Video preview card
+├── pages/
+│   └── Home.tsx           # Main page layout
+├── lib/
+│   └── types.ts           # TypeScript interfaces
+└── App.tsx                # Root component
 ```
 
 ## Features in Detail
 
-### Authentication
-- JWT-based authentication
-- Secure password hashing
-- Protected routes
+### Video Categories
+- Each category fetches relevant content using the YouTube Data API
+- Custom search queries for different content types
+- View counts and video statistics
 
-### Video Platform
-- Video grid layout
-- Channel information
-- View counts and timestamps
-- Verified channel badges
+### UI Components
+- Responsive sidebar with animated transitions
+- Video grid with thumbnail previews
+- Full video player with related videos
+- Comment section for each video
 
-### UI/UX
-- Collapsible sidebar
-- Responsive grid system
-- Smooth animations
-- User dropdown menu
-- Dark mode support (coming soon)
+### Navigation
+- Client-side routing with React Router
+- Persistent layout between route changes
+- Smooth transitions between pages
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [MongoDB](https://www.mongodb.com/)
-- [Express](https://expressjs.com/)
+Feel free to submit issues and enhancement requests!
