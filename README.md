@@ -38,7 +38,6 @@ A modern YouTube clone built with React, TypeScript, and Tailwind CSS. This appl
 1. Clone the repository
 ```bash
 git clone <repository-url>
-cd project-3
 ```
 
 2. Install dependencies
