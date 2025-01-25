@@ -1,10 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+// vitest.config.ts
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+	plugins: [react()],
+	test: {
+		environment: "jsdom", // Use jsdom for browser-like testing
+		globals: true, // Enable global variables like `describe`, `it`, and `expect`
+		setupFiles: "./vitest.setup.ts", // Optional: Add setup file
+	},
 });
