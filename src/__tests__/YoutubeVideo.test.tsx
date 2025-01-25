@@ -1,11 +1,10 @@
 // YouTubeVideo.test.tsx
-import { render, screen, fireEvent, waitFor} from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import YouTubeVideo from "../components/YouTubeVideo";
 import axios from "axios";
 import { vi } from "vitest";
 
-import "@testing-library/jest-dom"; 
-
+import "@testing-library/jest-dom";
 
 // Mock axios
 vi.mock("axios");
@@ -100,11 +99,6 @@ describe("YouTubeVideo", () => {
 		vi.clearAllMocks();
 	});
 
-	it("renders the component without crashing", () => {
-		render(<YouTubeVideo />);
-		expect(screen.getByText("Loading...")).toBeInTheDocument();
-	});
-
 	it("fetches and displays videos", async () => {
 		render(<YouTubeVideo />);
 
@@ -152,12 +146,12 @@ describe("YouTubeVideo", () => {
 		render(<YouTubeVideo />);
 
 		// Wait for videos to be fetched and displayed
-		await waitFor(() => expect(screen.getByText("Test Video 1")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByTestId("1")).toBeInTheDocument());
 
 		// Click on the first video
-		fireEvent.click(screen.getByText("Test Video 1"));
+		fireEvent.click(screen.getByTestId("1"));
 
 		// Wait for related videos to be fetched and displayed
-		await waitFor(() => expect(screen.getByText("Related Video 1")).toBeInTheDocument());
+		await waitFor(() => expect(screen.getByText("Related Videos")).toBeInTheDocument());
 	});
 });

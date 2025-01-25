@@ -226,7 +226,12 @@ const YouTubeVideo = ({ type = "home" }: Props) => {
 										)}
 									</div>
 									<div className="p-2">
-										<h3 className="font-semibold text-lg truncate">{video.snippet.title}</h3>
+										<h3
+											className="font-semibold text-lg truncate"
+											data-testid={video.id.videoId}
+										>
+											{video.snippet.title}
+										</h3>
 										<p className="text-gray-600 text-sm">{video.snippet.channelTitle}</p>
 									</div>
 								</div>
