@@ -1,6 +1,6 @@
 # YouTube Clone
 
-A modern YouTube clone built with React, TypeScript, and Tailwind CSS. This application provides a seamless video browsing experience with features similar to YouTube.
+A modern YouTube clone built with React, TypeScript, and Tailwind CSS and test with vitest. This application provides a seamless video browsing experience with features similar to YouTube.
 
 ## Features
 
@@ -27,11 +27,12 @@ A modern YouTube clone built with React, TypeScript, and Tailwind CSS. This appl
 - ⚛️ React 18
 - 🔷 TypeScript
 - 🎨 Tailwind CSS
-- 🚀 Vite
+- 🚀 Vite, Vitest
 - 🎭 Framer Motion
 - 🔄 React Router DOM
 - 📡 Axios
 - 🎬 YouTube Data API v3
+  
 
 ## Getting Started
 
